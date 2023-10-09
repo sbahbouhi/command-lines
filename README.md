@@ -2,14 +2,43 @@
 
 ## Encription
 
+### GPG
+
 `gpg --armor --symmetric --cipher-algo CIPHER message.txt`
 
 `gpg --output original_message.txt --decrypt message.gpg`
+
+### OpenSSL
+
+`openssl aes-256-cbc -e -in message.txt -out encrypted_message`
+
+`openssl aes-256-cbc -d -in encrypted_message -out original_message.txt`
 
 `openssl aes-256-cbc -pbkdf2 -iter 10000 -e -in message.txt -out encrypted_message`
 
 `openssl aes-256-cbc -pbkdf2 -iter 10000 -d -in encrypted_message -out original_message.txt`
 
+### RSA 
+
+`openssl genrsa -out private-key.pem 2048`
+
+`openssl rsa -in private-key.pem -pubout -out public-key.pem`
+
+`openssl rsa -in private-key.pem -text -noout`
+
+`openssl pkeyutl -encrypt -in plaintext.txt -out ciphertext -inkey public-key.pem -pubin`
+
+`openssl pkeyutl -decrypt -in ciphertext -inkey private-key.pem -out decrypted.txt`
+
+### Deffie Hellman
+
+`openssl dhparam -out dhparams.pem 2048`
+
+`openssl dhparam -in dhparams.pem -text -noout`
+
+### Certificate signing
+
+`openssl req -new -nodes -newkey rsa:4096 -keyout key.pem -out cert.csr`
 
 ## Gobuster
 
