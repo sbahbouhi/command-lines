@@ -42,6 +42,7 @@
 
 ## Gobuster
 
+gobuster dir -w /usr/share/wordlists/rockyou.txt -u "http://localhost:8000/"
 
 ## nmap
 
