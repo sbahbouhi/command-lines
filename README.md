@@ -79,5 +79,13 @@ nc -nlvp 1234
 `sqlmap -u "http://localhost:8000/index.php?id=1" -dbs`
 
 
-
+	
+<?php
+  for( $i = 0;; $i++) {
+    $test = "0e".$i;
+    if( md5($test) == $test) {
+      echo $test;
+    }
+  }
+?>
 
